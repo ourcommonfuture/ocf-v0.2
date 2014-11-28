@@ -15,7 +15,7 @@
         <td><%= course.name %></td>
         <td><%= course.title %></td>
         <td><%= link_to 'Show', course_path(course.name) %></td>
-        <td><%= link_to 'Edit', edit_course_path(course) %></td>
+        <td><%= link_to 'Edit', edit_course_path(course.name) %></td>
       </tr>
     <% end %>
   </tbody>
