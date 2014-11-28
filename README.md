@@ -39,5 +39,5 @@ export SECRET_KEY_BASE=[secret_token]
 Then, initiate the database by running:
 
 ```bash
-rake db:create db:migrate
+rake db:create db:migrate db:seed
 ```
