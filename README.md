@@ -41,3 +41,12 @@ Then, initiate the database by running:
 ```bash
 rake db:create db:migrate db:seed
 ```
+
+Test
+========
+
+To test the app, run the following commands:
+
+```bash
+rake test
+```
