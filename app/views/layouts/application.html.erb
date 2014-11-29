@@ -1,13 +1,130 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Ocf</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Our Common Future - Classes - Home</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class="off">
 
-<%= yield %>
+<!-- /.wrapbox start-->
+<div class="wrapbox">
+	<!-- NAV
+================================================== -->
+    <nav class="navbar navbar-fixed-top wowmenu" role="navigation">
+        <div class="container">
+
+            <div class="navbar-header">
+                <!-- <a class="navbar-brand logo-nav" href="index.html"><img src="img/logo.png" alt="logo"></a> -->
+                <a class="navbar-brand logo-nav" href="index.php"><img src="img/ocf_logo.png" style="width:77px;"></a>
+            </div>
+            <ul id="nav" class="nav navbar-nav pull-right">
+                <li class="" href="#"><a href="index.php">HOME</a></li>
+                <li class="" href="#"><a href="about.php">ABOUT</a></li>
+
+                <li class="dropdown">
+                <a href="classes.php" class="" >CLASSES</a>
+                </li>
+                <li class="dropdown">
+                <a href="../projects/" target="_blank" class="">PROJECTS</a>
+                </li>
+                <li class="">
+                <a href="blog.php">BLOG</a>
+                </li>
+                <li class="">
+                    <a href="impact.php" class="#">YOUR IMPACT</a>
+                </li> 
+                <li><a href="contact.php">CONTACT</a></li>               
+                
+                <li><a href="/login_page.php">LOGIN</a></li>
+
+
+            </ul>		
+        </div>	
+	</nav>
+    
+<!-- /nav end-->
+
+	
+	<!-- /.wrapsemibox start-->
+	<div class="wrapsemibox">
+		<div class="semiboxshadow text-center">
+			<img src="img/shp.png" class="img-responsive" alt="">
+		</div>
+
+		<%= yield %>
+
+
+
+	<!-- BEGIN FOOTER
+================================================== -->
+    <section>
+        <div class="footer">
+            <div class="container animated notransition">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h1 class="title"><span class="colortext">A</span>bout </h1>
+                        <p>
+                             OurCommonFuture (OCF) is the future of online education: a virtual immersion program (VIP) for high school students focused on global sustainability issues
+                        </p>
+                        <p>
+                             Made with &nbsp;<i class="icon-heart"></i>&nbsp; by Our Common Future &copy; Copyright 2014.
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <h1 class="title"><span class="colortext">S</span>tudents' </h1>
+                        <div id="quotes">
+                            <div class="textItem">
+                                <div class="avatar">
+                                    <img src="img/avatar.jpg" alt="avatar">
+                                </div>
+                                 "What stands out the most to me is the amazing lectures we had and our discussions. What I found interesting was the fact that everyone had something different to say and we could really learn from one another”<span style="font-family:arial;">"</span><br/><p style="padding-top:10px;"><b> Carola, Italy </b></p>
+                            </div>
+                            <div class="textItem">
+                                <div class="avatar">
+                                    <img src="img/avatar.jpg" alt="avatar">
+                                </div>
+                                 "I enjoyed meeting the other people who took the course and the fact that Online UWC managed to find great minds to interact with while being at home. I loved hearing about other places. The level of engagement we had with each other was much higher than other online courses I have taken<span style="font-family:arial;">"</span><br/><p style="padding-top:10px;"><b>Zawer, Syria </b></p>
+                            </div>
+                        </div>
+                        <div class="clearfix">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <h1 class="title"><span class="colortext">C</span>onnect </h1>
+                        <div class="footermap">
+                            <p>
+                                <strong>www.ocf.co</strong> 
+                            </p>
+
+
+                            <p>
+                                <strong>ourcommonfuture </strong> 
+                            </p>
+                            <p><br></p>
+                            <ul class="social-icons list-soc">
+                                <li><a href="https://www.facebook.com/ocfuture" target="_blank"><i class="icon-facebook"></i></a></li>
+                                <li><a href="https://twitter.com/OurCommonFutur" target="_blank"><i class="icon-twitter"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="icon-linkedin"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="icon-google-plus"></i></a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p id="back-top">
+            <a href="#top"><span></span></a>
+        </p>
+
+    </section>
+	<!-- /footer section end-->
+</div>
 
 <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
