@@ -47,8 +47,8 @@
 
                 <div class="course-log">
                     <div class="col-sm-12">
-                        <h3 class="log-name"><i class="glyphicon glyphicon-calendar"></i>January 5th – February 9th 2015</h3>
-                        <p class="details">Requires a commitment of 3-6 hours weekly from participating students.</p>
+                        <h3 class="log-name"><i class="glyphicon glyphicon-calendar"></i><%= @course.getSchedule() %></h3>
+                        <p class="details"><%= @course.schedule_notes %></p>
                     </div>
 
                     <div class="col-sm-12">
