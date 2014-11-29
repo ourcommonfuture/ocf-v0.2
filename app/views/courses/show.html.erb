@@ -1,19 +1,71 @@
-<p id="notice"><%= notice %></p>
+<section class="grayarea" id="aboutOCF" >
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h4 class="fil-ariane"><%= link_to 'Our Classes', courses_path %> > <%= @course.title %></h4>
+            </div>
+        </div>
+    </div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @course.name %>
-</p>
+    <div class="container" id="note">
+        <div class="row">
 
-<p>
-  <strong>Title:</strong>
-  <%= @course.title %>
-</p>
+            <!-- COURSE head -->
+            <div class="col-sm-4 animated notransition">
+                <div class="info-box shadow-large bottom0 wrap-courses">
+                    <div class="info-box-inner">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <%= image_tag @course.name+'.jpg', class: 'course-img-mini', alt: @course.title %>
+                            </div>
+                            <div class="col-xs-12 lefted">
+                                <div class="info-content">
+                                    <h2 class="class-title"><%= @course.title %></h2>
+                                    <%= link_to '< Back to courses list', courses_path %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="counter">
+                        <p class="count-text">Course starting in <strong>1 month and 3 days</strong>.</p>
+                        <div class="subscribe clearfix" >
+                            <div class="centered">
+                                <a class="btn btn-success btn-lg apply-btn" href="#apply">Apply now!</a>
+                                <a class="btn btn-primary btn-lg pay-btn" href="#pay">Pay</a>
+                            	<%= link_to 'Edit', edit_course_path(@course.name), class: 'btn btn-danger btn-lg pay-btn' %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @course.description %>
-</p>
+            <!-- COURSE details -->
+            <div class="col-sm-8 animated notransition">
+                <div class="details-box shadow-large bottom0">
+                    <p><%= @course.description %></p>
+                </div>
 
-<%= link_to 'Edit', edit_course_path(@course.name) %> |
-<%= link_to 'Back', courses_path %>
+                <div class="course-log">
+                    <div class="col-sm-12">
+                        <h3 class="log-name"><i class="fontawesome-icon icon-calendar"></i>January 5th – February 9th 2015</h3>
+                        <p class="details">Requires a commitment of 3-6 hours weekly from participating students.</p>
+                    </div>
+
+                    <div class="col-sm-12">
+                        <h3 class="log-name"><i class="fontawesome-icon icon-map-marker"></i>Provided in three locations.</h3>
+                        <ul class="details">
+                            <li>Europe, Middle East &amp; Africa (EMEA)</li>
+                            <li>Asia &amp; the Pacific</li>
+                            <li>The Americas &amp; the Caribbean</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-sm-12">
+                        <h3 class="log-name"><i class="fontawesome-icon icon-money"></i>&pound; 30 / $48 / €38</h3>
+                        <p class="details">Payment made through PayPal: <a href="#pay">pay now.</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

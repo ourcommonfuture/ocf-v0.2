@@ -21,9 +21,10 @@
   </div>
   <div class="field">
     <%= f.label :description %><br>
-    <%= f.text_area :description %>
+    <%= f.text_area :description, :class => 'desc-form' %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="actions righted">
+    <%= link_to "Back", course_path(@course.name), :class => 'btn btn-danger btn-lg' %>
+    <%= f.submit 'Update', :class => 'btn btn-success btn-lg pay-btn' %>
   </div>
 <% end %>

@@ -16,6 +16,10 @@
     text-align: left;
 }
 
+.righted {
+    text-align: right;
+}
+
 
 /* Courses list styles */ 
 
@@ -89,4 +93,14 @@ h3.log-name i {
 
 ul.details {
     margin-left: 30px;
+}
+
+.field {
+    input, textarea {
+        width: 100%;
+    }
+
+    textarea {
+        height: 150px;
+    }
 }

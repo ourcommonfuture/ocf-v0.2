@@ -1,6 +1,15 @@
-<h1>Editing course</h1>
+<section class="grayarea" id="aboutOCF" >
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h4 class="fil-ariane"><%= link_to 'Our Classes', courses_path %> > <%= link_to @course.title, course_path(@course.name) %> > Edit</h4>
+            </div>
+        </div>
+    </div>
 
-<%= render 'form' %>
-
-<%= link_to 'Show', course_path(@course.name) %> |
-<%= link_to 'Back', courses_path %>
+    <div class="container" id="note">
+        <div class="row">
+        	<%= render 'form' %>
+        </div>
+    </div>
+</section>
