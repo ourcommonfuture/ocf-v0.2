@@ -19,15 +19,15 @@ class Course < ActiveRecord::Base
 
 	def started?(now = nil)
 		now = DateTime.now if !now
-    milliSecsLeft = self.start.to_i - now.to_i
+		milliSecsLeft = self.start.to_i - now.to_i
 
-    # If the course already started
-    if milliSecsLeft < 0
-      return true
-    else
-    	return false
-    end
-  end
+		# If the course already started
+		if milliSecsLeft < 0
+			return true
+		else
+			return false
+		end
+	end
 
 	def getCounter(now = nil)
 		now = DateTime.now if !now
