@@ -13,11 +13,11 @@
             <% @courses.each do |course| %>
                 <div class="col-sm-4 animated notransition">
                     <div class="info-box shadow-large bottom0 wrap-courses">
-                        <a href="sus.html">
+                        <a href="/courses/<%= course.name %>">
                             <div class="info-box-inner">
                                 <div class="row">
                                     <div class="col-xs-12">
-                                        <img class="course-img-mini" src="img/<%= course.name %>.jpg" alt="<%= course.title %>"/>
+                                        <%= image_tag course.name+'.jpg' %>
                                     </div>
                                     <div class="col-xs-12">
                                         <div class="info-content">

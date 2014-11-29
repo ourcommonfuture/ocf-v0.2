@@ -6,8 +6,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Our Common Future - Classes - Home</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
 </head>
 <body class="off">
 
@@ -20,7 +20,9 @@
 
             <div class="navbar-header">
                 <!-- <a class="navbar-brand logo-nav" href="index.html"><img src="img/logo.png" alt="logo"></a> -->
-                <a class="navbar-brand logo-nav" href="index.php"><img src="img/ocf_logo.png" style="width:77px;"></a>
+                
+                
+                <a class="navbar-brand logo-nav" href="index.php"><%= image_tag 'ocf_logo.png' %></a>
             </div>
             <ul id="nav" class="nav navbar-nav pull-right">
                 <li class="" href="#"><a href="index.php">HOME</a></li>
@@ -53,7 +55,7 @@
 	<!-- /.wrapsemibox start-->
 	<div class="wrapsemibox">
 		<div class="semiboxshadow text-center">
-			<img src="img/shp.png" class="img-responsive" alt="">
+			<%= image_tag 'shp.png', class: "img-responsive" %>
 		</div>
 
 		<%= yield %>
@@ -80,13 +82,13 @@
                         <div id="quotes">
                             <div class="textItem">
                                 <div class="avatar">
-                                    <img src="img/avatar.jpg" alt="avatar">
+                                    <%= image_tag 'avatar.jpg', alt: "avatar" %>
                                 </div>
                                  "What stands out the most to me is the amazing lectures we had and our discussions. What I found interesting was the fact that everyone had something different to say and we could really learn from one another”<span style="font-family:arial;">"</span><br/><p style="padding-top:10px;"><b> Carola, Italy </b></p>
                             </div>
                             <div class="textItem">
                                 <div class="avatar">
-                                    <img src="img/avatar.jpg" alt="avatar">
+                                    <%= image_tag 'avatar.jpg', alt: "avatar" %>
                                 </div>
                                  "I enjoyed meeting the other people who took the course and the fact that Online UWC managed to find great minds to interact with while being at home. I loved hearing about other places. The level of engagement we had with each other was much higher than other online courses I have taken<span style="font-family:arial;">"</span><br/><p style="padding-top:10px;"><b>Zawer, Syria </b></p>
                             </div>
