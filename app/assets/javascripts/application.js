@@ -14,4 +14,6 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require plugins
+//= require jqueryCarouFredSel6packed
 //= require common
+//= require static

@@ -1,125 +1,44 @@
-<div class="semiboxshadow text-center">
-	<img src="img/shp.png" class="img-responsive" alt="">
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Our Common Future - Classes - Home</title>
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
+</head>
 
-<section class="grayarea" id="whatWeDo" >
-	<div class="container">
-		<div class="row">
-			<div id="how"class="col-md-12 text-center">
-				<h1>WHAT WE DO</h1>
-				
-			</div>
-		</div>
-	</div>
-
-	<div class="container" id="note">
-		<div class="row">
-			<div class="col-md-1"></div>
-			
-			<div class="col-md-5  animated fadeInLeftNow notransition">
-				<h2 class="whatwedo">OUR COMMON FUTURE (OCF) OFFERS ONLINE EDUCATION TO HIGH SCHOOL STUDENTS FROM ACROSS THE GLOBE</h2>
-			</div>
-			<div class="col-md-6  animated fadeInRightNow  notransition">
-					<p class="msg">Alongside our class offerings, we have created a social community platform which helps empower you to create your own social enterprise or other projects in your local community and connect with like-minded people.</p>
-			
-			</div>
-		</div>
-	</div>
-	</section>
-
-
-	<section class="intro-note topspace70">
-	<div class="container">
-		<div class="row">
-			<div id="how"class="col-md-12 text-center">
-				<h1>HOW IT WORKS</h1>
-				
-			</div>
-		</div>
-	</div>
-</section>
-<!-- /.intro-note end-->
-<!-- SERVICE BOXES
-================================================== -->
-<section class="service-box topspace30">
-	<div class="container">
-		<div class="row">
-			
-			<div class="col-md-3 text-center animated fadeInLeftNow notransition">
-				<div class="icon-box-top">
-					<i class="fontawesome-icon medium circle-white center icon-laptop" id="icon_circle"></i>
-					<h1 class="title">Attend a Class</h1>
-					<p>
-					Sign up for one or more of our empowering and action-oriented 5-week classes						</p>
-					<!-- <p class="fontupper">
-						<a href="#" class="readmore">Read More <i class="icon-double-angle-right"></i></a>
-					</p> -->
-				</div>
-			</div>
-			
-			<div class="col-md-3 text-center animated fadeInLeftNow notransition">
-				<div class="icon-box-top">
-					<i class="fontawesome-icon medium circle-white center icon-beaker"id="icon_circle"></i>
-					<h1 class="title">Start a Project</h1>
-					<p>
-						 Share your idea and what you need help with in the projects section of the website
-					</p>
-					<!-- <p class="fontupper">
-						<a href="#" class="readmore">Read More <i class="icon-double-angle-right"></i></a>
-					</p> -->
-				</div>
-			</div>
-			
-			<div class="col-md-3 text-center animated fadeInRightNow notransition">
-				<div class="icon-box-top ">
-					<i class="fontawesome-icon medium circle-white center icon-bullhorn"id="icon_circle"></i>
-					<h1 class="title">Connect</h1>
-					<p>
-						 Get together with your people from your community who want to help work towards the same goal
-					</p>
-					<!-- <p class="fontupper">
-						<a href="#" class="readmore">Read More <i class="icon-double-angle-right"></i></a>
-					</p> -->
-				</div>
-			</div>
-			<div class="col-md-3 text-center animated fadeInRightNow notransition">
-				<div class="icon-box-top">
-					<i class="fontawesome-icon medium circle-white center icon-globe"id="icon_circle"></i>
-					<h1 class="title">Change the World</h1>
-					<p>
-						 Be a force of change in your local community while making new friends
-					</p>
-					<!-- <p class="fontupper">
-						<a href="#" class="readmore">Read More <i class="icon-double-angle-right"></i></a>
-					</p> -->
-				</div>
-			</div>
-			
-		</div>
-	</div>
-</section>
-<!-- /.home-features end-->
-<section class="grayarea text-center  topspace30 animated fadeInUpNow notransition">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<h1 class="how">Contact Us</h1>
-				<div class="done">
-					<div class="alert alert-success">
-						<button type="button" class="close" data-dismiss="alert">×</button>
-						Your message has been sent. Thank you!
+<body class="home">
+	<div class="wrapper" id="wrapper">
+		<div class="caroufredsel_wrapper">
+			<div id="carousel" class="carousel">
+				<% ['background_63', 'background_123', 'background_93', 'background_82', 'background_102'].each do |i| %>
+					<div class="carousel-item">
+						<img src="<%= image_url(i+'.jpg') %>" alt="i">
 					</div>
+				<% end %>
+			</div>
+		</div>
+		<div class="wrapMain">
+			<div class="main">
+				<%= image_tag 'ocf_logo.svg' %>
+				<div class="pitch">
+					Building skills for the world and a sence of global reponsability.<br />
+					Looking at education as a two way exchange between students & mentors.
 				</div>
-				<form method="post" style="margin-top:30px;"action="http://www.wowthemes.net/demo/calypso/contact.php" id="contactform">
-					<div class="form">
-						<input id="contact_name"class="col-md-6" type="text" name="name" placeholder="Name">
-
-						<input id="contact_email" class="col-md-6" type="text" name="email" placeholder="E-mail">
-						<textarea id="contact_text" class="col-md-12" name="comment" rows="10" placeholder="Message"></textarea>
-						<input type="submit" id="submit" style="color:white; background:rgb(87, 168, 62);"  class="btn" value="S U B M I T">
-					</div>
-				</form>
+				<div id="continue_button" class="continue_button" >
+					<a href="/about">ABOUT US</a>
+					<a href="/courses" class="full-btn">OUR COURSES</a>
+				</div>
 			</div>
 		</div>
 	</div>
-</section>
+	<div class="mini_footer">
+		<a href="/blog">BLOG</a> - <a href="/contact">CONTACT</a>
+	</div>
+
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+</body>
+</html>
