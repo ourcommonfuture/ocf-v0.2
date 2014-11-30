@@ -7,6 +7,9 @@ sus:
   start: '2015-01-05'
   end: '2015-02-09'
   schedule_notes: 'Requires a commitment of 3-6 hours weekly from participating students.'
+  price: 30
+  paylink: ''
+  status: 'v2'
 
 int:
   name: 'international-politics'
@@ -15,6 +18,9 @@ int:
   start: '2015-01-05'
   end: '2015-02-09'
   schedule_notes: 'Requires a commitment of 3-6 hours weekly from participating students.'
+  price: 30
+  paylink: ''
+  status: 'new'
 
 social:
   name: 'social-entrepreneurship'
@@ -23,3 +29,6 @@ social:
   start: '2015-01-05'
   end: '2015-02-09'
   schedule_notes: 'Requires a commitment of 3-6 hours weekly from participating students.'
+  price: 30
+  paylink: ''
+  status: 'new'
