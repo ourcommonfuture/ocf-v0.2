@@ -12,13 +12,17 @@
   <% end %>
 
   <div class="row">
-    <div class="field col-sm-8">
+    <div class="field col-sm-6">
       <%= f.label :name %><br>
       <%= f.text_field :name %>
     </div>
-    <div class="field col-sm-4">
+    <div class="field col-sm-3">
       <%= f.label :status %> (null, v2 or new)<br>
       <%= f.text_field :status %>
+    </div>
+    <div class="field col-sm-3">
+      <%= f.label :order %><br>
+      <%= f.text_field :order %>
     </div>
     <div class="field col-sm-12">
       <%= f.label :title %><br>

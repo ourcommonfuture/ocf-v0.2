@@ -10,6 +10,7 @@ sus:
   price: 30
   paylink: ''
   status: 'v2'
+  order: 10
 
 int:
   name: 'international-politics'
@@ -21,6 +22,7 @@ int:
   price: 30
   paylink: ''
   status: 'new'
+  order: 20
 
 social:
   name: 'social-entrepreneurship'
@@ -32,3 +34,4 @@ social:
   price: 30
   paylink: ''
   status: 'new'
+  order: 30

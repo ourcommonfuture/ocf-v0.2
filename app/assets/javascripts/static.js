@@ -3,6 +3,7 @@ $(function() {
 		width: $(window).width(),
 		height: $(window).height(),
 		align: false,
+		auto: 10000,
 		items: {
 			visible: 1,
 			width: 'variable',
