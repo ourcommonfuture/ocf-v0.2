@@ -9,6 +9,9 @@
 
     <div class="container" id="note">
         <div class="row">
+            <% flash.each do |name, msg| -%>
+                <p class="alert alert-success"><%= msg %></p>
+            <% end -%>
 
             <!-- COURSE head -->
             <div class="col-sm-4 animated notransition">
