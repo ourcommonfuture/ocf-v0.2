@@ -28,8 +28,20 @@ h2.class-title {
     font-size: 20px;
 }
 
+.punchline {
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.fil-ariane {
+    font-weight: normal;
+    font-family: 'Open Sans',"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
 .course-img-mini {
     width: 100%;
+    min-height: 165px;
 }
 
 .info-box.wrap-courses {
@@ -101,6 +113,6 @@ ul.details {
     }
 
     textarea {
-        height: 150px;
+        height: 120px;
     }
 }

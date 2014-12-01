@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141130083000) do
+ActiveRecord::Schema.define(version: 20141201015100) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20141130083000) do
     t.string   "paylink"
     t.string   "status"
     t.integer  "order"
+    t.text     "details"
   end
 
   add_index "courses", ["name"], name: "index_courses_on_name", unique: true, using: :btree

@@ -41,11 +41,11 @@
 
             <!-- COURSE details -->
             <div class="col-sm-8 animated notransition">
-                <div class="details-box shadow-large bottom0">
+                <div class="col-sm-12 details-box shadow-large bottom0">
                     <p><%= raw @course.description %></p>
                 </div>
 
-                <div class="course-log">
+                <div class="col-sm-12 course-log">
                     <div class="col-sm-12">
                         <h3 class="log-name"><i class="glyphicon glyphicon-calendar"></i><%= @course.getSchedule() %></h3>
                         <p class="details"><%= @course.schedule_notes %></p>
@@ -64,6 +64,10 @@
                         <h3 class="log-name"><i class="glyphicon glyphicon-shopping-cart"></i>&pound; <%= @course.price %></h3>
                         <p class="details">Payment made through PayPal: <a href="<%= @course.paylink %>">pay now.</a></p>
                     </div>
+                </div>
+
+                <div class="col-sm-12 details-box shadow-large bottom0">
+                    <p><%= raw @course.details %></p>
                 </div>
             </div>
         </div>
