@@ -27,6 +27,5 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision "file", source: "provision/data/private_key", destination: "~/.ssh/id_rsa"
   config.vm.provision "file", source: "provision/data/gitconfig", destination: "~/.gitconfig"
 
-  config.vm.provision "shell", path: "provision/bootstrap_dev.sh"
   config.vm.provision "shell", path: "provision/bootstrap.sh", args: "~vagrant"
 end
