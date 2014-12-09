@@ -31,8 +31,8 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 group :development do
-	gem 'capistrano',  '~> 3.1'
-	gem 'capistrano-rails', '~> 1.1'
+	gem 'capistrano',  '~> 3.3.0'
+	gem 'capistrano-rails', '~> 1.1.1'
 end
 
 # Use ActiveModel has_secure_password

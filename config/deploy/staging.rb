@@ -5,7 +5,7 @@
 # property set.  Don't declare `role :all`, it's a meta role.
 
 # role :app, %w{deploy@example.com}
-role :web, %w{rails@104.236.35.110:4000}
+# role :web, %w{rails@104.236.35.110:4000}
 # role :db,  %w{deploy@example.com}
 
 
@@ -15,6 +15,7 @@ role :web, %w{rails@104.236.35.110:4000}
 # server list. The second argument is a, or duck-types, Hash and is
 # used to set extended properties on the server.
 
+server '104.236.35.110', roles: [:web], user: 'rails', port: 4000
 # server 'example.com', user: 'deploy', roles: %w{web app}, my_property: :my_value
 
 
@@ -25,11 +26,11 @@ role :web, %w{rails@104.236.35.110:4000}
 #
 # Global options
 # --------------
- set :ssh_options, {
-   keys: %w(/home/rlisowski/.ssh/id_digitalocean),
-   forward_agent: false,
-   auth_methods: %w(password)
- }
+ # set :ssh_options, {
+ #   keys: %w(/home/vagrant/.ssh/id_rsa),
+ #   forward_agent: false,
+ #   auth_methods: %w(password)
+ # }
 #
 # And/or per server (overrides global)
 # ------------------------------------
