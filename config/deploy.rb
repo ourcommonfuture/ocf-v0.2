@@ -8,7 +8,7 @@ set :repo_url, 'git@github.com:ourcommonfuture/ocf-v0.2.git'
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
 
 # Default deploy_to directory is /var/www/my_app_name
-set :deploy_to, '/home/rails/ocf-v0.2'
+set :deploy_to, '/home/rails/ocf'
 
 # Default value for :scm is :git
 # set :scm, :git

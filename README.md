@@ -77,7 +77,11 @@ rake test
 
 ## Push to staging
 
-**SOON**
+Simply run the command `bundle exec cap staging deploy`.
+
+**N.B.:** make sure the command `bundle exec cap staging check_write_permissions` and `bundle exec cap staging git:check` runs successfully.
+
+If not, it might comes from your ssh key in the `provision/data` folder.
 
 ## Push to production
 
