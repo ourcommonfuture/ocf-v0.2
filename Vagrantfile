@@ -24,7 +24,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # argument is a set of non-required options.
   config.vm.synced_folder ".", "/vagrant"
 
-  config.vm.provision "file", source: "provision/data/private_key", destination: "~/.ssh/id_rsa"
+  config.vm.provision "file", source: "provision/data/id_rsa", destination: "~/.ssh/id_rsa"
   config.vm.provision "file", source: "provision/data/gitconfig", destination: "~/.gitconfig"
 
   config.vm.provision "shell", path: "provision/bootstrap.sh", args: "~vagrant"
