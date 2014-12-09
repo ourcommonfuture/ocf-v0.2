@@ -5,6 +5,9 @@
 # Config files
 provision/data
 
+# Capistrano ignores
+.capistrano/
+
 # Rails ignore
 *.rbc
 capybara-*.html
