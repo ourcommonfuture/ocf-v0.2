@@ -3,8 +3,9 @@ ocf-v0.2
 
 OCF Website v0.2. Based on Ruby on Rails.
 
-Get Started
-==========
+# Get Started
+
+## Start-up your dev box with Vagrant
 
 You need to have vagrant installed (see [here](https://github.com/ourcommonfuture/dev-setup/), them run those commands in your github project folder:
 ```bash
@@ -14,14 +15,57 @@ vagrant up
 vagrant ssh
 ```
 
+## Configure it
+
+(This step will be soon automated...)
+
+### Postgresql
+
+Once you are ssh-ed in your box, run those commands to configure postgres:
+
+```bash
+sudo -i -u postgres
+createuser -P -s vagrant
+# it will ask you for the password, put the one you want
+```
+
+Assign the 2 environnement variables `PGUSER` & `PGPASSWORD` by editing the `~/.bashrc`
+
+```bash
+export PGUSER=[username]
+export PGPASSWORD=[password]
+```
+
+### Rails
+
+You know need to configure your rails secret key. Run the `rake secret` command and copy the generate value. Pasted into `~/.bashrc` as the `SECRET_KEY_BASE` environnement variable
+
+
+```bash
+export SECRET_KEY_BASE=[secret_token]
+```
+
 Then, initiate the database by running:
 
 ```bash
 rake db:create db:migrate db:seed
 ```
 
-Test
-========
+### Deployment
+
+In order to be able to deploy to OCF servers, you need to configure your box ssh.
+
+*N.B.:* Make sure you had put your ssh private key in `/provision/data/id_rsa` before running the `vagrant up` command!
+
+```bash
+# start the ssh-agent in the background
+eval "$(ssh-agent -s)"
+# then add your ssh key
+ssh-add ~/.ssh/id_rsa
+```
+
+# Test
+
 
 To test the app, run the following commands:
 
@@ -29,8 +73,21 @@ To test the app, run the following commands:
 rake test
 ```
 
-Production
-======
+# Deployment
+
+## Push to staging
+
+Simply run the command `bundle exec cap staging deploy`.
+
+**N.B.:** make sure the command `bundle exec cap staging check_write_permissions` and `bundle exec cap staging git:check` runs successfully.
+
+If not, it might comes from your ssh key in the `provision/data` folder.
+
+## Push to production
+
+**SOON**
+
+## Create a production server
 
 We choosed to run the servers on Digital ocean droplets. [Here is a tutorial](https://www.digitalocean.com/community/tutorials/how-to-deploy-a-rails-app-with-passenger-and-nginx-on-ubuntu-14-04) to get a instance up and running thanks to Passenger, along with [installing rails](https://gorails.com/setup/ubuntu/14.10).
 
