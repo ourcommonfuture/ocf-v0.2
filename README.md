@@ -5,9 +5,21 @@ OCF Website v0.2. Based on Ruby on Rails.
 
 # Get Started
 
+## Requirements
+
+- You need to have vagrant installed (see instructions [here](https://github.com/ourcommonfuture/dev-setup/)
+
+If you are contributor, of course more requirements ;) :
+
+- Make sure you put a valid SSH private key in `provision/data/id_rsa`. Valid means that it has authorisation into staging and/or production servers, and that its private key is added in your [github SSH keys list](https://github.com/settings/ssh).
+
+**N.B.:** See [here](https://help.github.com/articles/generating-ssh-keys/) is you need to create a ssh key. Then send the public version to the main dev admin to add it to the servers (never share the private version!!!)
+
+- Also put into `provision/data/gitconfig` your `.gitconfig` file from your local environement that you have set (see [here](https://help.github.com/articles/set-up-git/))
+
 ## Start-up your dev box with Vagrant
 
-You need to have vagrant installed (see [here](https://github.com/ourcommonfuture/dev-setup/), them run those commands in your github project folder:
+Run those commands in your github project folder:
 ```bash
 # Then start your box: it download the required files (can take some times) and run the VM
 vagrant up

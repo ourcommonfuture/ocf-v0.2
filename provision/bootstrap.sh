@@ -7,8 +7,12 @@ start=$(date +%s)
 echo "=============================================="
 echo "============= Start bootstraping ============="
 
-echo "============= PERMISSIONS ============="
+echo "============= PERMISSIONS & SSH managment ============="
 chmod 600 $1/.ssh/id_rsa
+# start the ssh-agent in the background
+eval "$(ssh-agent -s)"
+# then add your ssh key
+ssh-add $1/.ssh/id_rsa
 
 cd /tmp
 echo "============= Update ============="
