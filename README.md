@@ -7,21 +7,21 @@ OCF Website v0.2. Based on Ruby on Rails.
 
 ## Requirements
 
-- You need to have vagrant installed (see instructions [here](https://github.com/ourcommonfuture/dev-setup/)
+- You need to have vagrant installed (see instructions [here](https://github.com/ourcommonfuture/dev-setup/))
 
-If you are contributor, of course more requirements ;) :
+If you are contributor (of course more requirements ;) :
 
-- Make sure you put a valid SSH private key in `provision/data/id_rsa`. Valid means that it has authorisation into staging and/or production servers, and that its private key is added in your [github SSH keys list](https://github.com/settings/ssh).
+- Make sure you put a valid SSH private key in `provision/data/` as `id_rsa`. Valid means that it has authorisation into staging and/or production servers, and that its public key is added in your [github SSH keys list](https://github.com/settings/ssh).
 
-**N.B.:** See [here](https://help.github.com/articles/generating-ssh-keys/) is you need to create a ssh key. Then send the public version to the main dev admin to add it to the servers (never share the private version!!!)
+**N.B.:** See [here](https://help.github.com/articles/generating-ssh-keys/) for more instructions, especially if you need to create a ssh key. The public version of your ssh key shoud be sent to the main dev admin in order to add it to the servers (**carefull**, never share the private key!!!)
 
-- Also put into `provision/data/gitconfig` your `.gitconfig` file from your local environement that you have set (see [here](https://help.github.com/articles/set-up-git/))
+- Also put into `provision/data/` as `gitconfig` your `.gitconfig` file from your local environement that you have previously set up (guide [here](https://help.github.com/articles/set-up-git/))
 
 ## Start-up your dev box with Vagrant
 
-Run those commands in your github project folder:
+Run those commands in the github project folder you just cloned:
 ```bash
-# Then start your box: it download the required files (can take some times) and run the VM
+# Then start your box: it download the required files (can take some times), run the VM and configure the whole environement (this can also take some times, go grab a coffee and enjoy the feeling of seeing the computer doing stuff for you :)
 vagrant up
 # You then only have to run this command to ssh in a the perfect env!
 vagrant ssh
@@ -63,19 +63,6 @@ Then, initiate the database by running:
 rake db:create db:migrate db:seed
 ```
 
-### Deployment
-
-In order to be able to deploy to OCF servers, you need to configure your box ssh.
-
-*N.B.:* Make sure you had put your ssh private key in `/provision/data/id_rsa` before running the `vagrant up` command!
-
-```bash
-# start the ssh-agent in the background
-eval "$(ssh-agent -s)"
-# then add your ssh key
-ssh-add ~/.ssh/id_rsa
-```
-
 # Test
 
 
@@ -89,11 +76,15 @@ rake test
 
 ## Push to staging
 
-Simply run the command `bundle exec cap staging deploy`.
+Simply run this command:
 
-**N.B.:** make sure the command `bundle exec cap staging check_write_permissions` and `bundle exec cap staging git:check` runs successfully.
+```bash
+bundle exec cap staging deploy
+```
 
-If not, it might comes from your ssh key in the `provision/data` folder.
+**N.B.:** If it shows errors (unsuccessfull), make sure the command `bundle exec cap staging check_write_permissions` and `bundle exec cap staging git:check` runs successfully.
+
+If not, it might comes from your ssh key in the `provision/data` folder that is either missing, or not authorized on the server.
 
 ## Push to production
 
