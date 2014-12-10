@@ -14,9 +14,9 @@ eval "$(ssh-agent -s)"
 # then add your ssh key
 ssh-add $1/.ssh/id_rsa
 
-cd /tmp
-echo "============= Update ============="
-sudo apt-get -qq update
+echo "============= apt-get add & update ============="
+add-apt-repository ppa:chris-lea/node.js
+apt-get -qq update
 
 echo "============= MISCs ============="
 apt-get install -y -qq libgdbm-dev libncurses5-dev automake libtool bison libffi-dev
@@ -47,34 +47,44 @@ chsh -s /bin/zsh vagrant
 
 chown -R vagrant:vagrant $1/.oh-my-zsh
 
-# echo "============= RUBY (via RVM) ============="
-# curl -sSL https://get.rvm.io | bash -s stable
-# source /usr/local/rvm/scripts/rvm
-# echo "source $1/.rvm/scripts/rvm" >> $1/.bashrc
+echo "============= RUBY (via RVM) ============="
+pwd
+gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3
+curl -sSL https://get.rvm.io | bash -s stable --path $1/.rvm
+source $1/.rvm/scripts/rvm
+echo "source $1/.rvm/scripts/rvm" >> $1/.zshrc
+rvm install 2.1.3
+rvm use 2.1.3 --default
 
-# echo "============= NODE ============="
-# sudo add-apt-repository ppa:chris-lea/node.js
-# sudo apt-get update
-# sudo apt-get -y -q install nodejs
+echo "============= NODE ============="
+apt-get -y -qq install nodejs
 
-# echo "============= RAILS ============="
-# gem install rails
+echo "============= RAILS ============="
+gem install rails
 
-# echo "============= POSTGRES ============="
-# sudo sh -c "echo 'deb http://apt.postgresql.org/pub/repos/apt/ precise-pgdg main' > /etc/apt/sources.list.d/pgdg.list"
-# wget --quiet -O - http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc | sudo apt-key add -
-# apt-get -y -q install postgresql-common
-# apt-get -y -q install postgresql-9.3 libpq-dev
-# apt-get install -y -q postgresql postgresql-contrib
-# sudo -u postgres createuser -P -s vagrant
+echo "============= POSTGRES ============="
+# Adding Postgress id to the environement vars
+source /vagrant/provision/data/id_pg.sh
+cat /vagrant/provision/data/id_pg.sh >> $1/.bashrc
 
-# echo "============= ALIASES ============="
+apt-get install -y postgresql postgresql-contrib
+sudo -u postgres psql -c "CREATE USER $PGUSER WITH PASSWORD '$PGPASSWORD';"
 
-# echo "
-# alias commit='git commit -m'" > /home/vagrant/.bash_aliases
+# OLD
+# sh -c "echo 'deb http://apt.postgresql.org/pub/repos/apt/ precise-pgdg main' > /etc/apt/sources.list.d/pgdg.list"
+# wget --quiet -O - http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc | apt-key add -
+# apt-get -y -qq install postgresql-common
+# apt-get -y -qq install postgresql-9.3 libpq-dev
+# apt-get install -y -qq postgresql postgresql-contrib
+# sudo -u postgres createuser -P -s $PGUSER
 
-# echo "
-# cd /vagrant" >> /home/vagrant/.zshrc
+echo "============= ALIASES ============="
+
+echo "
+alias commit='git commit -m'" > /home/vagrant/.bash_aliases
+
+echo "
+cd /vagrant" >> /home/vagrant/.zshrc
 
 echo "============= End of bootstraping ============="
 echo "==============================================="
