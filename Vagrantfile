@@ -27,5 +27,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision "file", source: "provision/data/id_rsa", destination: "~/.ssh/id_rsa"
   config.vm.provision "file", source: "provision/data/gitconfig", destination: "~/.gitconfig"
 
+  # Bootstraping, arg is the user
   config.vm.provision "shell", path: "provision/bootstrap.sh", args: "~vagrant"
+  # Init rails app, arg is the rails app folder
+  config.vm.provision "shell", path: "provision/rails_init.sh", args: "/vagrant"
 end

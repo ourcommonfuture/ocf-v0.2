@@ -65,10 +65,13 @@ gem install rails
 echo "============= POSTGRES ============="
 # Adding Postgress id to the environement vars
 source /vagrant/provision/data/id_pg.sh
+cat /vagrant/provision/data/id_pg.sh >> $1/.zshrc
 cat /vagrant/provision/data/id_pg.sh >> $1/.bashrc
 
-apt-get install -y postgresql postgresql-contrib
-sudo -u postgres psql -c "CREATE USER $PGUSER WITH PASSWORD '$PGPASSWORD';"
+apt-get -y -qq install postgresql-common
+apt-get -y -qq install postgresql-9.3 libpq-dev
+apt-get install -y -qq postgresql postgresql-contrib
+sudo -u postgres psql -c "CREATE USER $PGUSER WITH PASSWORD '$PGPASSWORD' SUPERUSER;"
 
 # OLD
 # sh -c "echo 'deb http://apt.postgresql.org/pub/repos/apt/ precise-pgdg main' > /etc/apt/sources.list.d/pgdg.list"
