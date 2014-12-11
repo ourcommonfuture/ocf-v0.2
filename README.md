@@ -21,32 +21,13 @@ If you are contributor (of course more requirements ;) :
 
 Run those commands in the github project folder you just cloned:
 ```bash
-# Then start your box: it download the required files (can take some times), run the VM and configure the whole environement (this can also take some times, go grab a coffee and enjoy the feeling of seeing the computer doing stuff for you :)
+# Start your box: it download the required files (can take some times), run the VM and configure the whole environement (this can also take some times, go grab a coffee and enjoy the feeling of seeing the computer doing stuff for you :)
 vagrant up
 # You then only have to run this command to ssh in a the perfect env!
 vagrant ssh
 ```
 
-## Configure it
-
-(This step will be soon automated...)
-
-### Postgresql
-
-Once you are ssh-ed in your box, run those commands to configure postgres:
-
-```bash
-sudo -i -u postgres
-createuser -P -s vagrant
-# it will ask you for the password, put the one you want
-```
-
-Assign the 2 environnement variables `PGUSER` & `PGPASSWORD` by editing the `~/.bashrc`
-
-```bash
-export PGUSER=[username]
-export PGPASSWORD=[password]
-```
+## Initialization
 
 ### Rails
 
@@ -64,7 +45,6 @@ rake db:create db:migrate db:seed
 ```
 
 # Test
-
 
 To test the app, run the following commands:
 

@@ -5,19 +5,19 @@ echo "================================================"
 echo "============= Start rails app init ============="
 
 cd $1
-source /vagrant/provision/data/id_pg.sh
+source provision/data/id_pg.sh
 
 echo "============= Bundle install ============="
 bundle install
 
-echo "============= Rake create ============="
-rake db:create
-
-echo "============= Rake create ============="
-rake db:migrate
-
-echo "============= Rake seed ============="
-rake db:seed
+echo "============= NO DB init ============="
+>&2 echo "Don't forget to init you database by running "
+>&2 echo "this command once your are connected in ssh:"
+>&2 echo " "
+>&2 echo "	rake db:create db:migrate db:seed"
+>&2 echo " "
+>&2 echo "See README.md for more information"
+# rake db:create db:migrate db:seed
 
 
 echo "============= Finished rails app init ============="
