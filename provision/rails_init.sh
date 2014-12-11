@@ -5,8 +5,20 @@ echo "================================================"
 echo "============= Start rails app init ============="
 
 cd $1
+source /vagrant/provision/data/id_pg.sh
+
+echo "============= Bundle install ============="
 bundle install
-rake db:create db:migrate db:seed
+
+echo "============= Rake create ============="
+rake db:create
+
+echo "============= Rake create ============="
+rake db:migrate
+
+echo "============= Rake seed ============="
+rake db:seed
+
 
 echo "============= Finished rails app init ============="
 echo "==================================================="
