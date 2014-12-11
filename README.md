@@ -29,16 +29,7 @@ vagrant ssh
 
 ## Initialization
 
-### Rails
-
-You know need to configure your rails secret key. Run the `rake secret` command and copy the generate value. Pasted into `~/.bashrc` as the `SECRET_KEY_BASE` environnement variable
-
-
-```bash
-export SECRET_KEY_BASE=[secret_token]
-```
-
-Then, initiate the database by running:
+Initiate and prepopulate the database by running:
 
 ```bash
 rake db:create db:migrate db:seed

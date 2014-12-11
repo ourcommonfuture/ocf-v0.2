@@ -30,5 +30,5 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Bootstraping, arg is the user
   config.vm.provision "shell", path: "provision/bootstrap.sh", args: "~vagrant"
   # Init rails app, arg is the rails app folder
-  config.vm.provision "shell", path: "provision/rails_init.sh", args: "/vagrant"
+  config.vm.provision "shell", path: "provision/rails_init.sh", args: ["/vagrant", "/home/vagrant"]
 end

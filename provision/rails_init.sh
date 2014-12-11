@@ -10,6 +10,11 @@ source provision/data/id_pg.sh
 echo "============= Bundle install ============="
 bundle install
 
+echo "============= Secret creation ============="
+echo 'export SECRET_KEY_BASE='$(rake secret) > provision/data/rake_secret.sh
+cat /vagrant/provision/data/rake_secret.sh >> $2/.zshrc
+cat /vagrant/provision/data/rake_secret.sh >> $2/.bashrc
+
 echo "============= NO DB init ============="
 >&2 echo "Don't forget to init you database by running "
 >&2 echo "this command once your are connected in ssh:"
