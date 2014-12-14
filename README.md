@@ -7,15 +7,23 @@ OCF Website v0.2. Based on Ruby on Rails.
 
 ## Requirements
 
-- You need to have vagrant installed (see instructions [here](https://github.com/ourcommonfuture/dev-setup/))
+- You need to have Vagrant AND Virtual Box installed (see instructions [here](https://github.com/ourcommonfuture/dev-howto))
 
 If you are contributor (of course more requirements ;) :
 
-- Make sure you put a valid SSH private key in `provision/data/` as `id_rsa`. Valid means that it has authorisation into staging and/or production servers, and that its public key is added in your [github SSH keys list](https://github.com/settings/ssh).
+- Make sure you put a valid SSH private key in `provision/data/` as `id_rsa`. Valid means that it has authorisation into staging and/or production servers, and that its public key is added in your [github SSH keys list](https://github.com/settings/ssh). Here is an example command to do so:
+
+```bash
+mv ~/.ssh/id_rsa.pub provision/data/id_rsa
+```
 
 **N.B.:** See [here](https://help.github.com/articles/generating-ssh-keys/) for more instructions, especially if you need to create a ssh key. The public version of your ssh key shoud be sent to the main dev admin in order to add it to the servers (**carefull**, never share the private key!!!)
 
 - Also put into `provision/data/` as `gitconfig` your `.gitconfig` file from your local environement that you have previously set up (guide [here](https://help.github.com/articles/set-up-git/))
+
+```bash
+mv ~/.gitconfig provision/data/gitconfig
+```
 
 ## Start-up your dev box with Vagrant
 
