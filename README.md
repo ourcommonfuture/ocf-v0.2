@@ -86,3 +86,5 @@ Host ocf
 ```
 
 Knowing that you [created the ssh-key](https://help.github.com/articles/generating-ssh-keys/) and added thanks to `ssh-add -K [name].pub`.
+
+Built with immense amounts of love by Hanna and Kim <3
