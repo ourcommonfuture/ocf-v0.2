@@ -73,6 +73,9 @@ If not, it might comes from your ssh key in the `provision/data` folder that is 
 
 We choosed to run the servers on Digital ocean droplets. [Here is a tutorial](https://www.digitalocean.com/community/tutorials/how-to-deploy-a-rails-app-with-passenger-and-nginx-on-ubuntu-14-04) to get a instance up and running thanks to Passenger, along with [installing rails](https://gorails.com/setup/ubuntu/14.10).
 
+
+Tutorial misses a point to first install passenger gem before running the installation command
+
 To restart your server, just run `sudo nginx -s reload`.
 
 **N.B.:** To connect easily to your instance with a command like `ssh ocf`, add `[IP_ADDRESS] ocf` to your file `/etc/hosts` and add those lines to `~/.ssh/config`:
