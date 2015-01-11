@@ -10,17 +10,17 @@
 	<%= csrf_meta_tags %>
 </head>
 
-<body class="home" background="/assets/images/river_background.jpg">
+<body class="home">
 	<div class="wrapper" id="wrapper">
-		<!-- <div class="caroufredsel_wrapper"> -->
-			<!-- <div id="carousel" class="carousel"> -->
-				# <!--<% ['river_background'].each do |i| %>-->
-					<!-- <div class="carousel-item"> -->
-					<!-- <img src="<%= image_url(i+'.jpg') %>" alt="i"> -->
-					<!-- </div> -->
-				# <!-- <% end %> -->
-			<!-- </div> -->
-		<!-- </div> -->
+		<div class="caroufredsel_wrapper">
+			<div id="carousel" class="carousel">
+				<% ['river_background'].each do |i| %>
+					<div class="carousel-item">
+					<img src="<%= image_url(i+'.jpg') %>" alt="i">
+					</div>
+				<% end %>
+			</div>
+		</div>
 
 		<!-- <div class="login"> -->
 			<!-- <a href="/login" class="empty-btn">LOGIN</a> -->
