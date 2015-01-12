@@ -73,6 +73,15 @@ body {
 	}
 }
 
+@media screen and (max-height: 600px){
+	.wrapMain{
+		margin-top:0px;
+		position:absolute;
+		top:5%;
+		z-index:2
+	}
+}
+
 .continue_button {
 	text-align: center;
 	margin-top: 50px;
