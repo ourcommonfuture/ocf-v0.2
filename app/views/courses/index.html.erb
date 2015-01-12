@@ -30,7 +30,7 @@
                             </div>        
                         </a>
                         <div class="counter">
-                            <p class="count-text"><%= Course starting in <strong> course.getCounter() </strong>%>.</p>
+                            <p class="count-text"><%= 'Course starting in <strong>' +course.getCounter()+ '</strong>'%>.</p>
                             <div class="subscribe clearfix" >
                                 <div class="centered">
                                 <a class="btn btn-success btn-lg apply-btn <%= 'disabled' if course.paylink == '' %>" href="#"><%= course.paylink == '' ? 'Opening soon...' : 'Apply now!' %></a>
