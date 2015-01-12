@@ -7,10 +7,13 @@ html, body.home {
 	height: 100%;
 	padding: 0;
 	margin: 0;
+	background: url("/assets/river_background.jpg");
+	background-size: 100%;
 }
 body {
 	min-height: 600px;
 }
+
 
 .login {
 	position: absolute;
@@ -53,12 +56,18 @@ body {
 			font-color:white;
 		}
 
+		.logo_home {
+			margin-left: 155px;
+			margin-right: 155px;
+		}
+
 		.pitch {
 			margin-top: 30px;
 			color: white;
 			font-style: italic;
 			font-weight: bold;
 			font-size: 20px;
+			text-align: center;
 		}
 	}
 }
@@ -68,10 +77,14 @@ body {
 	margin-top: 50px;
 }
 
+
 a.empty-btn, a.full-btn {
+	display: inline-block;
+	width: 25%;
 	padding:14px;
 	border: 1px solid white;
 	font-size: 13px;
+	font-weight: 600;
 	text-decoration: none;
 }
 

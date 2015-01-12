@@ -222,6 +222,8 @@ font-weight: 500;}
 	-ms-transition:all 0.2s ease-in-out;
 	transition:all 0.2s ease-in-out;
 	height: 83px;
+	width: 83px;
+	text-align: center;
 }
 .navbar-nav>li.active>a,.navbar-nav>li.active>a:hover,.navbar-nav>li.active>a:focus {
 	background-color:#f54828;
@@ -352,23 +354,23 @@ font-weight: 500;}
 	left:-6px;
 }
 .wowmenu.tiny {
-	top:0px !Important;
+	/*top:0px !Important;
 	background:rgba(57,57,57,0.87) !important;
-	/*padding-top:30px;
+	padding-top:30px;
 	padding-bottom:10px;*/
 }
 .wowmenu.tiny .navbar-nav>li>a {
-	line-height:24px;
+	/*line-height:24px;
 	margin-top:-26px;
 	padding-top:30px;
 	margin-bottom:-20px;
-	padding-bottom:16px;
+	padding-bottom:16px;*/
 }
 .navbar-brand img {
 	max-width:100%;
 }
 .wowmenu.tiny .navbar-brand img {
-	max-width:85%;
+	/*max-width:85%;*/
 }
 .navbar-brand img,.wowmenu.tiny .navbar-brand img {
 	transition:all 0.7s ease;
@@ -383,7 +385,7 @@ font-weight: 500;}
 
 .whatwedo1 h2{
 	font-family: Asap, sans-serif;
-	font-weight: 700px;
+	font-weight: normal;
 	color: #393939;
 	font-size:25px;
 	text-align:center;
