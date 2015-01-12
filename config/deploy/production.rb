@@ -1,7 +1,7 @@
 set :stage, :production
 set :branch, "master"
 set :bundle_flags, '--deployment'
-set :rvm_ruby_version, '2.2.0'
+set :rvm_ruby_version, '2.1.3'
 set :server_name, "onlineuwc.org"
 set :full_app_name, "ocf"
 set :log_path, "/var/log/#{fetch(:full_app_name)}"
