@@ -10,7 +10,7 @@
   client_max_body_size 4G;
   keepalive_timeout 10;
 
-  location ~ ^(/assets) {
+  location ~ ^(/assets|/fonts|/404.html|/422.html|/500.html) {
     root <%= fetch(:deploy_to) %>/current/public;
     expires 1M;
     access_log off;
