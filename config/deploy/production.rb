@@ -7,5 +7,6 @@ set :full_app_name, "ocf"
 set :log_path, "/var/log/#{fetch(:full_app_name)}"
 set :deploy_to, "/var/www/#{fetch(:full_app_name)}"
 set :rails_env, :production
- 
+set :redirect_www, true
+
 server '178.62.111.27', user: 'deploy', roles: %w{app}, primary: true
