@@ -1,48 +1,52 @@
-# config valid only for current version of Capistrano
-lock '3.3.3'
-
 set :application, 'ocf'
+set :deploy_user, 'deploy'
+
+# roles
+set :assets_roles, [:app]
+set :assets_prefix, 'assets'
+set :migration_role, :app
+
+# Custom varialbes for bundler
+set :bundle_env_variables, { nokogiri_use_system_libraries: 1 }
+
+# Output format
+#set :log_level , :info
+set :format , :pretty
+set :pty, true
+
+# setup repo details
+set :scm, :git
 set :repo_url, 'git@github.com:ourcommonfuture/ocf-v0.2.git'
 
-# Default branch is :master
-# ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
 
-# Default deploy_to directory is /var/www/my_app_name
-set :deploy_to, '/home/rails/ocf'
+# how many old releases do we want to keep, not much
+set :keep_releases, 3
 
-# Default value for :scm is :git
-# set :scm, :git
+# files we want symlinking to specific entries in shared
+set :linked_files, %w{.env}
 
-# Default value for :format is :pretty
-# set :format, :pretty
+# dirs we want symlinking to shared
+set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 
-# Default value for :log_level is :debug
-# set :log_level, :debug
 
-# Default value for :pty is false
-# set :pty, true
-
-# Default value for :linked_files is []
-# set :linked_files, fetch(:linked_files, []).push('config/database.yml')
-
-# Default value for linked_dirs is []
-# set :linked_dirs, fetch(:linked_dirs, []).push('bin', 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system')
-
-# Default value for default_env is {}
-# set :default_env, { path: "/opt/ruby/bin:$PATH" }
-
-# Default value for keep_releases is 5
-# set :keep_releases, 5
+# this:
+# http://www.capistranorb.com/documentation/getting-started/flow/
+# is worth reading for a quick overview of what tasks are called
+# and when for `cap stage deploy`
 
 namespace :deploy do
+  # make sure we're deploying what we think we're deploying
+  before :deploy, "deploy:check_revision"
 
-  after :restart, :clear_cache do
-    on roles(:web), in: :groups, limit: 3, wait: 10 do
-      # Here we can do anything such as:
-      # within release_path do
-      #   execute :rake, 'cache:clear'
-      # end
-    end
-  end
+  # compile assets locally then rsync
+  before :migrate, 'deploy:setup_config'
+  after 'deploy:symlink:release', 'assets:precompile'
 
+  # automatically.
+  after :finishing, 'deploy:cleanup'
+
+  after "deploy:publishing", "foreman:export"
+  before :finishing, "foreman:restart"
+  after :deploy, "nginx:stop"
+  after :deploy, "nginx:start"
 end
