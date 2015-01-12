@@ -93,10 +93,18 @@ a.empty-btn, a.full-btn {
 	text-align: center;
 	width: 25%;
 	/*padding:14px;*/
+	padding-top:14px;
+	padding-bottom:14px;
 	border: 1px solid white;
 	font-size: 13px;
 	font-weight: 600;
 	text-decoration: none;
+}
+
+@media screen and (max-height: 600px){
+	a.empty-btn, a.full-btn {
+		font-size: 11px;
+	}
 }
 
 a.empty-btn {
