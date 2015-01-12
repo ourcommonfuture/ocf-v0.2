@@ -39,7 +39,12 @@
                             </p>
                             <div class="subscribe clearfix" >
                                 <div class="centered">
-                                <a class="btn btn-success btn-lg apply-btn <%= 'disabled' if course.paylink == '' %>" href="#"><%= course.paylink == '' ? 'Opening soon...' : 'Apply now!' %></a>
+                                <a class="btn btn-success btn-lg apply-btn <%= 'disabled' if course.paylink == '' %>" href="#">
+                                    <% if course.getCounter() =='' %>
+                                    In progress...
+                                    <% else %>
+                                    <%= course.paylink == '' ? 'Opening soon...' : 'Apply now!' %></a>
+                                    <% end %>
                                 </div>
                             </div>
                         </div>
