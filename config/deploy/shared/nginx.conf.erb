@@ -4,7 +4,7 @@
   server_name <%= fetch(:redirect_www) ? "www.#{fetch(:server_name)}" : "" %> <%= fetch(:server_name) %>;
 
   location / {
-    proxy_pass http://127.0.0.1:5000/;
+    proxy_pass http://127.0.0.1:3000/;
     include /etc/nginx/proxy_params;
   }
   client_max_body_size 4G;
