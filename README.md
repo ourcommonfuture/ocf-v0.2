@@ -43,6 +43,10 @@ Initiate and prepopulate the database by running:
 rake db:create db:migrate db:seed
 ```
 
+#Troubleshoot: 'Peer authentication failed' after rake:db
+
+
+
 # Test
 
 To test the app, run the following commands:
