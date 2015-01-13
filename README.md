@@ -43,9 +43,23 @@ Initiate and prepopulate the database by running:
 rake db:create db:migrate db:seed
 ```
 
-#Troubleshoot: 'Peer authentication failed' after rake:db
+**Troubleshoot: 'Peer authentication failed' after rake:db**
 
+Happens when trying to act on the DB (drop/create/migrate/seed) from local Unix socket.
+By config postgres expects the postgres user to be the same as the Unix user ('peer'). Since the default postgres user is 'postgres' and the Unix user will be 'vagrant' there is a conflict.
 
+Solution:
+
+```bash
+sudo nano /etc/postgresql/9.3/main/pg_hba.conf
+```
+In the file change every instance of 'peer' to 'trust' (any user can access) or 'md5' (users are password-protected but then you have to create a password for your user)
+
+Save, then restart psql
+
+```bash
+sudo service postgresql restart
+```
 
 # Test
 
