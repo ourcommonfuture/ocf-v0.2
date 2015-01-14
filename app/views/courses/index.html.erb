@@ -41,7 +41,7 @@
                                 <div class="centered">
                                 <a class="btn btn-success btn-lg apply-btn <%= 'disabled' if course.started? %>" href="https://docs.google.com/forms/d/1AyhbRDJYxeWACifHjKVe1IkVX1BqxxJasAE7SJkk4wk/viewform" target="_blank"><%= course.started? ? 'In progress...' : 'Apply now!' %></a>
                                 <% if course.started? == false %><a class="btn btn-primary btn-lg pay-btn" href="<%= course.paylink %>">Pay</a><% end %>
-                                <!--<%= link_to 'Edit', edit_course_path(@course.name), class: 'btn btn-danger btn-lg pay-btn' %>-->
+                                <!--<%= link_to 'Edit', edit_course_path(course.name), class: 'btn btn-danger btn-lg pay-btn' %>-->
                                 </div>
                             </div>
                         </div>
