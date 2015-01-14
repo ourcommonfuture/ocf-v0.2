@@ -24,6 +24,7 @@ jQuery(window).scroll(function () {
     jQuery('.wowmenu').addClass('tiny');
   }
 });
+	
 
 //----NICE SCROLL---//  
 jQuery(document).ready(function($){
