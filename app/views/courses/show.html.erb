@@ -31,10 +31,10 @@
                     </div>
                     <div class="counter">
                         <p class="count-text">
-                                <% if course.getCounter() =='' %>
+                                <% if @course.getCounter() =='' %>
                                 Course in progress
                                 <% else %>
-                                Course starting in <strong><%= course.getCounter() %></strong>
+                                Course starting in <strong><%= @course.getCounter() %></strong>
                                 <% end %>
                             </p>
                         <div class="subscribe clearfix" >
