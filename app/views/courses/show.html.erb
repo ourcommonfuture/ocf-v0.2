@@ -30,10 +30,16 @@
                         </div>
                     </div>
                     <div class="counter">
-                        <p class="count-text">Course starting in <strong><%= @course.getCounter() %></strong>.</p>
+                        <p class="count-text">
+                                <% if course.getCounter() =='' %>
+                                Course in progress
+                                <% else %>
+                                Course starting in <strong><%= course.getCounter() %></strong>
+                                <% end %>
+                            </p>
                         <div class="subscribe clearfix" >
                             <div class="centered">
-                                <a class="btn btn-success btn-lg apply-btn" href="https://docs.google.com/forms/d/1AyhbRDJYxeWACifHjKVe1IkVX1BqxxJasAE7SJkk4wk/viewform" target="_blank"><%= @course.started? ? 'In progress...' : 'Apply now!' %></a>
+                                <a class="btn btn-success btn-lg apply-btn <%= 'disabled' if @course.started? %>" href="https://docs.google.com/forms/d/1AyhbRDJYxeWACifHjKVe1IkVX1BqxxJasAE7SJkk4wk/viewform" target="_blank"><%= @course.started? ? 'In progress...' : 'Apply now!' %></a>
                                 <a class="btn btn-primary btn-lg pay-btn <%= 'disabled' if @course.paylink == '' %>" href="<%= @course.paylink %>">Pay</a>
                             	<!--<%= link_to 'Edit', edit_course_path(@course.name), class: 'btn btn-danger btn-lg pay-btn' %>-->
                             </div>
