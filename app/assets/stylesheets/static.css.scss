@@ -82,7 +82,7 @@ body {
 	}
 }
 
-media screen and (max-height: 500px){
+@media screen and (max-height: 500px){
 	.wrapMain{
 		margin-top:0px;
 		position:absolute;
