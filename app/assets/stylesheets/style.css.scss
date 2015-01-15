@@ -1345,6 +1345,7 @@ h1.small {
 }
 .footermap {
 	background:image-url("map.png") no-repeat;
+	height:99px;
 }
 .footerbrand i {
 	color:#555;
@@ -1366,7 +1367,7 @@ h1.small {
 .footer ul.social-icons {
 	list-style:none;
 	margin-left:0px;
-		margin-top:25px;
+		margin-top:0px;
 }
 .copyright {
 	color:#fff;
