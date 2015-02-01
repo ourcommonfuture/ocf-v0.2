@@ -11,8 +11,34 @@
 			"file": "README.md",
 			"settings":
 			{
-				"buffer_size": 3140,
+				"buffer_size": 3833,
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/layouts/application.html.erb",
+			"settings":
+			{
+				"buffer_size": 6875,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/static/about.html.erb",
+			"settings":
+			{
+				"buffer_size": 13915,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "Searching 388 files for \"col-md-8\"\n\n/Users/HannaCelina/Documents/ocf-v0.2/app/views/static/about.html.erb:\n   40  		</div>\n   41  \n   42: 		<div class=\"col-md-8 col-md-offset-2\">\n   43  			<p class=\"right_msg\">Our courses are taught based on flexible curriculum that favors skills that are crucial in our society: teamwork, creativity, independence and adaptability. We want to inform our teaching with the knowledge that key facts are accessible with technology. We want to focus learning around how to access and analyse all available information, and we want to help the students understand bias embedded in data. We want to help students challenge the unknown, embrace complexity, and accept failure as a stepping stone. We want the students to know how to ask and answer complex questions, understand the cause of things, find solutions, work in a team and share their ideas. We want to encourage our course participants to identify their own interests and grow as independent thinkers. We want to make our students comfortable working in complex international/intercultural settings. Finally, we are interested in showing the students how to apply their understanding of complex issues to solve simpler, smaller, local problems.</p>\n   44  		</div>\n   ..\n   54  		</div>\n   55  \n   56: 		<div class=\"col-md-8 col-md-offset-2\">\n   57  			<p class=\"right_msg\">Our Common Future (a for profit organization) created its first courses on Sustainable Development and Human Rights in partnership with United World Colleges (a not for profit organization with which we share the proceeds).<br />\n   58  			We are always looking for new and inspiring partnerships. If you are interested in becoming our partner organisation, please use the <a href=\"/contact\">contact form</a> to get in touch with us.</p>\n   ..\n   75  		<div class=\"col-md-12\">\n   76  		<div class=\"col-md-1\"></div>\n   77: 		<div class=\"col-md-8 animated notransition\">\n   78  			<div id=\"memberImage\"class=\"pull-right\">\n   79                  <%= image_tag 'round_hanna_2x.png', class: 'img-circle' %>\n   ..\n  263  <!--			<h1>About us</h1>-->\n  264  <!--		</div>-->\n  265: <!--		<div class=\"col-md-8 col-md-offset-2\">-->\n  266  <!--				<p class=\"right_msg\">-->\n  267  <!--				Online UWC was founded in 2014 by Hanna Celina and a team of passionate alumni of United World Colleges.-->\n\n/Users/HannaCelina/Documents/ocf-v0.2/app/views/static/contact.html.erb:\n   21  		\n   22  	</div>\n   23: 	<div class=\"col-md-8 animated fadeInLeft notransition\">\n   24  		<h1 class=\"smalltitle\">\n   25  		<span>Get in Touch (under construction....)</span>\n\n/Users/HannaCelina/Documents/ocf-v0.2/app/views/static/mission.html.erb:\n    5  			<h1>OUR MISSION</h1>\n    6  		</div>\n    7: 		<div class=\"col-md-8 col-md-offset-2\">\n    8  			<p class=\"right_msg\">Online UWC makes online education a force to unite people to build a peaceful and sustainable future.\n    9  					<br />\n   ..\n   23  			<h1>What makes us different</h1>\n   24  		</div>\n   25: 		<div class=\"col-md-8 col-md-offset-2\">\n   26  				<p class=\"right_msg\"><b>Students led learning</b> - we focus the learning process on the student and their needs, with mentors acting as facilitators.\n   27  				<br />\n   ..\n   43  			<h1>Our approach to learning</h1>\n   44  		</div>\n   45: 		<div class=\"col-md-8 col-md-offset-2\">\n   46  				<p class=\"right_msg\">We believe in student oriented learning methods. We want to encourage our course participants to identify their own interests and grow as independent thinkers. With our unique flexible curriculum and assignment structure students can design a course that best fits their learning objectives. This approach allows the students to develop skills that are crucial in our society: teamwork, creativity, independence and adaptability. \n   47  					<br />\n   ..\n   69  			<h1></h1>\n   70  		</div>\n   71: 		<div class=\"col-md-8 col-md-offset-2\">\n   72  				<p class=\"right_msg\">\n   73  					<br />\n   ..\n  104  		</div>\n  105  \n  106: 		<div class=\"col-md-8 col-md-offset-2\">\n  107  			<p class=\"right_msg\">Our courses are taught based on flexible curriculum that favors skills that are crucial in our society: teamwork, creativity, independence and adaptability. We want to inform our teaching with the knowledge that key facts are accessible with technology. We want to focus learning around how to access and analyse all available information, and we want to help the students understand bias embedded in data. We want to help students challenge the unknown, embrace complexity, and accept failure as a stepping stone. We want the students to know how to ask and answer complex questions, understand the cause of things, find solutions, work in a team and share their ideas. We want to encourage our course participants to identify their own interests and grow as independent thinkers. We want to make our students comfortable working in complex international/intercultural settings. Finally, we are interested in showing the students how to apply their understanding of complex issues to solve simpler, smaller, local problems.</p>\n  108  		</div>\n  ...\n  118  		</div>\n  119  \n  120: 		<div class=\"col-md-8 col-md-offset-2\">\n  121  			<p class=\"right_msg\">Our Common Future (a for profit organization) created its first courses on Sustainable Development and Human Rights in partnership with United World Colleges (a not for profit organization with which we share the proceeds).<br />\n  122  			We are always looking for new and inspiring partnerships. If you are interested in becoming our partner organisation, please use the <a href=\"/contact\">contact form</a> to get in touch with us.</p>\n\n11 matches across 3 files\n",
+			"settings":
+			{
+				"buffer_size": 5684,
+				"line_ending": "Unix",
+				"name": "Find Results",
+				"scratch": true
 			}
 		}
 	],
@@ -52,9 +78,10 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 93.0,
 		"where_history":
 		[
+			""
 		]
 	},
 	"find_state":
@@ -62,6 +89,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"col-md-8",
 			"gcb-header",
 			"∂"
 		],
@@ -81,7 +109,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -89,15 +117,15 @@
 					"file": "README.md",
 					"settings":
 					{
-						"buffer_size": 3140,
+						"buffer_size": 3833,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3112,
-								3112
+								0,
+								0
 							]
 						],
 						"settings":
@@ -106,6 +134,144 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 902.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/views/layouts/application.html.erb",
+					"settings":
+					{
+						"buffer_size": 6875,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2950,
+								2950
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 923.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/views/static/about.html.erb",
+					"settings":
+					{
+						"buffer_size": 13915,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5990,
+								5990
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1702.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"settings":
+					{
+						"buffer_size": 5684,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										152,
+										160
+									],
+									[
+										1306,
+										1314
+									],
+									[
+										1900,
+										1908
+									],
+									[
+										2155,
+										2163
+									],
+									[
+										2467,
+										2475
+									],
+									[
+										2746,
+										2754
+									],
+									[
+										3011,
+										3019
+									],
+									[
+										3305,
+										3313
+									],
+									[
+										3877,
+										3885
+									],
+									[
+										4007,
+										4015
+									],
+									[
+										5161,
+										5169
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"detect_indentation": false,
+							"output_tag": 1,
+							"result_base_dir": "",
+							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
